@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Press+Start+2P&display=swap');
+
+.userContainer {
+  /* margin: 0;
+  padding: 0;
+  background-color: #09ebd8;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  flex-direction: row;*/
+  height: inherit;
+  width: 400px;
+  border: 1px solid red; 
+}
+
+.loginContainer {
+  /* padding: .75rem; */
+  list-style-type: none;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  margin: 0;
+  border: 1px solid darkblue;
+
+}
+
+.logoutContainer {
+  /* padding: .75rem; */
+  display: inline;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  margin: 0;
+  border: 1px solid darkblue;
+}
+
+.loginLink {
+  text-decoration: none;
+}
+
+.login {
+  list-style-type: none;
+}
+
+.googleIcon {
+  color: whitesmoke;
+  /* display: inline; */
+  font-size: 1.5rem;
+}
+
+.googleText {
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  display: inline;
+  /* font-size: 2rem; */
+}
+
+.paymentsContainer {
+  display: inline;
+  border: 1px solid darkgreen;
+}
+
+.creditsContainer {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  color: gold;
+  /* font-size: 1rem; */
+  text-align: center;
+  display: inline;
+  border: 1px solid darkviolet;
+}
+
+.logoutContainer .loginLink button {
+  /* font-size: 1rem; */
+  color: black;
+  text-align: center;
+  border-radius: .15rem;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}

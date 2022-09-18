@@ -1,0 +1,11 @@
+
+
+  footer {
+    background: wheat;
+    padding: 2rem;
+    text-align: center;
+    /* grid-column: 1 / 4; */
+    height: 50px;
+    width: 100%;
+
+  }

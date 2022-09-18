@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
+:root {
+    --bg-color: #5df2a4;
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 24;
+    --color: black;
+    --heading-font-color: #f2ee5d;
+    --header-bg-color: #5d61f2;
+}
+/* 
+#5d61f2
+#f25dac
+#f2ee5d
+#5df2a4 */
+
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto 1fr auto;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+ @media only screen and (min-width: 1281px) {
+    .gridContainer {
+     grid-template-columns: 1fr 4fr 1fr;
+    } 
+ }
+
+header {
+    grid-column: 1 / 4;
+}
+
+.leftSidebar {
+    grid-column: 1 / 2;
+  }
+
+.mainContent{
+    background: coral;
+    grid-column: 2 / 3;
+}
+
+.rightSidebar {
+    grid-column: 3 / 4;
+  }
+
+  footer {
+    grid-column: 1 / 4;
+  }

@@ -1,0 +1,29 @@
+.uiContainer{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.btnLink {
+    text-decoration: none;
+
+}
+
+
+.btn {
+    margin: 2rem;
+    padding: .25rem;
+    background-color: darkslategrey; /* Green */
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    display: block;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    height: 25px;
+}
