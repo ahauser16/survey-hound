@@ -1,11 +1,13 @@
 
 
   footer {
-    background: wheat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255,160,0,1);
     padding: 2rem;
-    text-align: center;
-    /* grid-column: 1 / 4; */
     height: 50px;
     width: 100%;
-
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
   }

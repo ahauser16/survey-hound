@@ -16,17 +16,19 @@ class SurveyList extends Component {
             <li className={styles.surveyCard} key={survey._id}>
               <p className={styles.cardTitle}>Title: {survey.title}</p>
               <p className={styles.surveySentTimestamp}>
-              <p className={styles.surveyMsgBody}>Message: {survey.body}</p>
-                Sent On: {new Date(survey.dateSent).toLocaleDateString()}
+                <p className={styles.surveyMsgBody}>Message: {survey.body}</p>
+                <p className={styles.surveySentOn}>
+                  Sent On: {new Date(survey.dateSent).toLocaleDateString()}
+                </p>
               </p>
               <div className={styles.cardContent}>
                 <div className={styles.surveyResults}>
                   <p>Recipient chose:</p>
-                  <a>
+                  <a className={styles.yesContainer}>
                     <span className={styles.yesTxt}>Yes:</span>
                     <span className={styles.yesResults}>{survey.yes}</span>
                   </a>
-                  <a>
+                  <a className={styles.noContainer}>
                     <span className={styles.noTxt}>No:</span>
                     <span className={styles.noResults}>{survey.no}</span>
                   </a>

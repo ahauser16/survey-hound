@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #8997d4;
     display: grid;
     place-items: center;
     width: auto;
@@ -15,12 +14,13 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-
 }
 
 .logoImg {
-    color: rgba(255, 0, 0, 0.276);
+    color: rgba(255, 0, 0, .4);
     margin: 0;
     padding: 0;
     display: inline;
+    background: radial-gradient(circle, rgba(242,238,93,1) 25%, rgba(93,97,242,1) 60%);
+
 }

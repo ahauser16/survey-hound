@@ -9,15 +9,8 @@
     --heading-font-color: #f2ee5d;
     --header-bg-color: #5d61f2;
 }
-/* 
-#5d61f2
-#f25dac
-#f2ee5d
-#5df2a4 */
 
-
-
-body {
+body, header {
     box-sizing: border-box;
     margin: 0;
     padding: 0;

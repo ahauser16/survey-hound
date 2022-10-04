@@ -8,9 +8,9 @@ span {
     padding: 5px;
     display: flex;
     justify-content: left;
-    width: 100%;
     flex-direction: column;
-    background-color: rgb(229, 239, 250);
+    background: #edc0bf;
+    background: linear-gradient(90deg, #edc0bf 0, #c4caef 58%);
 
 }
 
@@ -18,14 +18,14 @@ span {
     /* border: 1px solid whitesmoke; */
     margin: 2px;
     padding: 2px 16px;
-    background-color: rgb(109, 145, 184);
-    width: 95%;
-    justify-content: center;
-    align-items: center;
-
-    box-shadow: 0 4px 8px 0 darkred;
+    background: rgba(255, 255, 255, .7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     transition: 0.3s;
     border-radius: 5px;
+    width: 25%;
+    position: relative;
+    /* border: 2px solid darkgrey; */
 }
 
 .cardContainer:hover {
@@ -34,74 +34,95 @@ span {
 
 
 .cardTitle {
-    border: 1px solid goldenrod;
     margin: 2px;
     padding: 2px 16px;
     display: block;
+    background-color: rgb(126, 190, 201);
+    border-radius: 50px 50px 50px 0px;
 }
 
 .surveyMsgBody {
-    border: 1px solid goldenrod;
     margin: 2px;
     padding: 2px 16px;
+    background-color: rgb(126, 190, 201);
+    border-radius: 50px 0px 0px 50px;
+    text-align: right;
 }
 
+.surveySentOn {
+    text-align: center;
+}
+
+
 .surveySentTimestamp {
-    border: 1px solid goldenrod;
     margin: 2px;
     padding: 2px 16px;
+    background-color: rgb(229, 167, 33);
+    border-radius: 0px 0px 0px 50px;
+    /* display: flex; */
 }
 
 .surveyCard {
-    border: 1px solid red;
     margin: 2px;
     padding: 2px 16px;
     display: flex;
     flex-direction: column;
+    background: rgba(255, 255, 255, .3);
 }
 
-
-
 .cardContent {
+    background-color: rgb(126, 190, 201);
     border: 1px solid lightblue;
     margin: 2px;
     padding: 2px 16px;
+    border-radius: 50px 0px 0px 0px;
 
 }
 
 .surveyResults {
-    border: 1px solid goldenrod;
     margin: 2px;
     padding: 2px 16px;
+    text-align: center;
 }
 
-.surveyResults a {
-    border: 1px solid darkcyan;
+.yesContainer {
+    border-radius: 50px 50px 50px 50px;
+    background-color: rgb(229, 167, 33);
+    text-align: center;
     margin: 10px;
     padding: 4px 32px;
     display: block;
 }
 
 .yesTxt {
-    border: 1px solid black;
     margin: 5px 5px;
     padding: 5px 5px;
+    color: green;
 }
 
 .yesResults {
-    border: 1px solid black;
-    margin: 5px 5px;
-    padding: 5px 5px;
+    /* margin: 5px 5px;
+    padding: 5px 5px; */
+    color: green;
+}
+
+.noContainer {
+    border-radius: 50px 50px 50px 50px;
+    background-color: rgb(229, 167, 33);
+    text-align: center;
+    margin: 10px;
+    padding: 4px 32px;
+    display: block;
 }
 
 .noTxt {
-    border: 1px solid black;
     margin: 5px 5px;
     padding: 5px 5px;
+    color: red;
 }
 
 .noResults {
-    border: 1px solid black;
-    margin: 5px 5px;
-    padding: 5px 5px;
+    /* margin: 5px 5px;
+    padding: 5px 5px; */
+    color: red;
 }

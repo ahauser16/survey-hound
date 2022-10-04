@@ -14,12 +14,14 @@ const Landing = () => {
   return (
     <div className={styles.landing}>
       <section className={styles.welcomeContainer}>
+        <div className={styles.hero}>
         <h1>
           Survey
           <FontAwesomeIcon icon={faShieldDog} />
           Hound
         </h1>
         <h2 className={styles.welcome}>Collect feedback from your users!</h2>
+        </div>
         <button>Get Started</button>
       </section>
 
