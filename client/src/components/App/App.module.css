@@ -28,7 +28,7 @@ body, header {
    
 }
 
- @media only screen and (min-width: 1023px) {
+ @media only screen and (min-width: 1022px) {
     .gridContainer {
      grid-template-columns: 1fr 4fr 1fr;
     } 
