@@ -28,7 +28,7 @@ require("./routes/surveyRoutes")(app);
 
 
 if (process.env.NODE_ENV === 'production') {
-  //Express will serve up production assets; hmmm another small change.
+  //Express will serve up production assets.
   //such as our main.js file, or main.css file!
   app.use(express.static('client/build'));
   //Express will serve up the index.html file
