@@ -1,6 +1,7 @@
 const passport = require("passport");
 
 module.exports = (app) => {
+  //this second argument to GoogleStrategy sends a request to Google's servers for the specified kind of access to the user profile which in our case is their profile and email address.
   app.get(
     "/auth/google",
     passport.authenticate("google", {
@@ -8,7 +9,7 @@ module.exports = (app) => {
     })
   );
 
-  //this allows the cookie to be sent back to the user.
+  //at this point we have the user's user-granted-permission-code from the redirect URL: 'localhost:5000/auth/google/callback?code=abc123' and we then want to send a request that contains that code to Google's servers whose protocol is handled by GoogleStrategy.  Google servers receives the 'code' which tells Google servers that this is not the first time the user is trying to log in.  Then Google servers reply back with details about the user.  GoogleStrategy is doing the work for us here...
   app.get("/auth/google/callback", passport.authenticate("google"), (req, res) => {
     res.redirect('/surveys');
   });

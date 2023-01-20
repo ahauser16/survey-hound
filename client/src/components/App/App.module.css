@@ -10,7 +10,8 @@
     --header-bg-color: #5d61f2;
 }
 
-body, header {
+body,
+header {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -19,20 +20,20 @@ body, header {
     width: 100%;
 }
 
-.gridContainer{
+.gridContainer {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     justify-content: center;
     width: 100%;
-   
+
 }
 
- @media only screen and (min-width: 1022px) {
+@media only screen and (min-width: 1022px) {
     .gridContainer {
-     grid-template-columns: 1fr 4fr 1fr;
-    } 
- }
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+}
 
 header {
     grid-column: 1 / 4;
@@ -40,17 +41,17 @@ header {
 
 .leftSidebar {
     grid-column: 1 / 2;
-  }
+}
 
-.mainContent{
+.mainContent {
     background: coral;
     grid-column: 2 / 3;
 }
 
 .rightSidebar {
     grid-column: 3 / 4;
-  }
+}
 
-  footer {
+footer {
     grid-column: 1 / 4;
-  }
+}

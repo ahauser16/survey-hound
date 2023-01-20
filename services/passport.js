@@ -27,9 +27,14 @@ passport.use(
       callbackURL: "/auth/google/callback",
       proxy: true,
     },
+    //this second argument to GoogleStrategy has been refactored into authRoutes.js which essentially sends a request to Google's servers for the specified kind of access to the user profile which in our case is access to their profile and email address.  Now at this point we have the user's information provided to us by GoogleStrategy: user's profile and access token.  This second argument below is the entry point to take user info and save it to our database.
+
+    //fyi if we wanted to modify the user's account in some fashion we would need the user's accessToken.
+    //fyi the refreshToken would allow us to refresh the accessToken.
     async (accessToken, refreshToken, profile, done) => {
       const existingUser = await User.findOne({ googleId: profile.id });
 
+      //pre-existing record was found, this code is refactored since lecture 45.
       if (existingUser) {
         return done(null, existingUser);
       }
