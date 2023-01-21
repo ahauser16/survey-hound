@@ -7,8 +7,12 @@ const keys = require("./config/keys");
 require("./models/user");
 require("./models/survey");
 require("./services/passport");
-//NB--> THE ORDER OF THE ABOVE REQUIRE STATEMENTS MATTERS
-//the the wrong way to order the require statements is to require passport before user or survey.  the reason is that ideally we want to extract the user model but the Passport.js file is executed whenever the index.js file requires it in.
+
+//////////////////////////
+//course repo has this mongoose code but was not covered in the course.  This is legacy code and explained here: https://stackoverflow.com/questions/51862570/mongoose-why-we-make-mongoose-promise-global-promise-when-setting-a-mongoo
+//mongoose.Promise = global.Promise;//
+///////////////////////////////////
+
 mongoose.connect(keys.mongoURI);
 
 const app = express();
@@ -37,8 +41,7 @@ if (process.env.NODE_ENV === 'production') {
   //Express will serve up the index.html file
   //if it doesn't recognize the route.
   const path = require('path');
-  
-  app.get('*', (req, res) => {
+    app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }

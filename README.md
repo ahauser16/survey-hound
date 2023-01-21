@@ -54,11 +54,24 @@ Question: What about the scripts section in package.json, do those files need to
 
 Question: How does the Railway CLI work? Does that need to be changed?
 
-I. When dploying website in development make sure to...
+I. When deploying Survey-Hound in development make sure to first...
 
-Step One-->
+STEP ONE - CHECK DATABASE 
+check to see if your mongoDb cluster is active and connected for BOTH your development and production builds.
 
-Step Two-->
+STEP TWO - INITIALIZE NGROK (reference lecture 190 and https://dashboard.ngrok.com/)
+
+### A) CONSOLE COMMAND: ngrok http 5000
+You'll want to keep this terminal session open in its own console window and running while you are developing. If you close the running ngrok session and re-run ngrok http 5000, the address will be different. It is important to remember this detail as you will likely need to update the ngrok generated address in your Sendgrid dashboard a few times through the development process.
+
+### B) update sendgrid's HTTP Post URL
+Go to https://app.sendgrid.com/settings/mail_settings and in the HTTP Post URL field type:
+
+'ngrok generated domain' + '/api/surveys/webhooks'
+see example below.
+https://3254-69-120-232-228.ngrok.io/api/surveys/webhooks
+
+
 
 Step Three-->
 
